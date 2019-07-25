@@ -7,9 +7,33 @@
     <meta name="author" content="Kyle Waters">
     <link media="screen" href="main.css" />
     <link media="print" href="print.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        function change(){
+            $('span').show();
+            switch($('#type').val()){
+                case 'Woman' :
+                    $('span:not([woman]').hide();
+                    break;
+                case 'Man' :
+                    $('span:not([man]').hide();
+                    break;
+                case 'Child' :
+                    $('span:not([child]').hide();
+                    break;
+            }
+            
+        }
+    </script>
 </head>
 <body>
     <h1>Individual Camping List</h1>
+    <select id="type" onChange="change();">
+        <option>All</option>
+        <option>Woman</option>
+        <option>Man</option>
+        <option>Child</option>
+    </select>
     <table>
         <thead>
             <tr>
@@ -78,10 +102,14 @@
                     <input type="checkbox" />
                 </td>
                 <td>
-                    Toys
+                    <span child>
+                        Toys
+                    </span>
                 </td>
                 <td>
-                    <input type="checkbox" />
+                    <span child>
+                        <input type="checkbox" />
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -104,10 +132,14 @@
                     <input type="checkbox" />
                 </td>
                 <td>
-                    Stuff Animal
+                    <span child>
+                        Stuff Animal
+                    </span>
                 </td>
                 <td>
-                    <input type="checkbox" />
+                    <span child>
+                        <input type="checkbox" />
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -144,22 +176,34 @@
                     <input type="checkbox" />
                 </td>
                 <td>
-                    Bras
+                    <span woman>
+                        Bras
+                    </span>
                 </td>
                 <td>
-                    <input type="checkbox" />
+                    <span woman>
+                        <input type="checkbox" />
+                    </span>
                 </td>
                 <td>
-                    Tampons/Pads/Cups
+                    <span woman>
+                        Tampons/Pads/Cups
+                    </span>
                 </td>
                 <td>
-                    <input type="checkbox" />
+                    <span woman>
+                        <input type="checkbox" />
+                    </span>
                 </td>
                 <td>
-                    Camera
+                    <span man woman>
+                        Camera
+                    </span>
                 </td>
                 <td>
-                    <input type="checkbox" />
+                    <span man woman>
+                        <input type="checkbox" />
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -176,10 +220,14 @@
                     <input type="checkbox" />
                 </td>
                 <td>
-                    Face Wipes
+                    <span woman>
+                        Face Wipes
+                    </span>
                 </td>
                 <td>
-                    <input type="checkbox" />
+                    <span woman>
+                        <input type="checkbox" />
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -198,10 +246,14 @@
             </tr>
             <tr>
                 <td>
-                    Passport
+                    <span child>
+                        Parks Passport
+                    </span>
                 </td>
                 <td>
-                    <input type="checkbox" />
+                    <span child>
+                        <input type="checkbox" />
+                    </span>
                 </td>
                 <td>
                     Hiking Shoes/Socks
@@ -209,7 +261,6 @@
                 <td>
                     <input type="checkbox" />
                 </td>
-                Handkerchiefs
             </tr>
             <tr>
                 <td />
