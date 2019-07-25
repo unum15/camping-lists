@@ -10,16 +10,16 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script>
         function change(){
-            $('span').show();
+            $('tr').show();
             switch($('#type').val()){
                 case 'Woman' :
-                    $('span:not([woman]').hide();
+                    $('tr[not-woman]').hide();
                     break;
                 case 'Man' :
-                    $('span:not([man]').hide();
+                    $('tr[not-man]').hide();
                     break;
                 case 'Child' :
-                    $('span:not([child]').hide();
+                    $('tr[not-child]').hide();
                     break;
             }
             
@@ -34,242 +34,303 @@
         <option>Man</option>
         <option>Child</option>
     </select>
-    <table>
+    <br style="clear:left" />
+    <table style="float:left">
         <thead>
             <tr>
+                <th />
                 <th>
                     Equipment
                 </th>
-                <th />
-                <th>
-                    Clothing
-                </th>
-                <th />
-                <th>
-                    Hygiene
-                </th>
-                <th />
-                <th>
-                    Entertainment
-                </th>
-                <th />
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
                     Sleeping bag
                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Mattress/Pad
+                </td>                
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Pillow
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Blanket
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Water Bottle
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Pocket Knife
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Flash Light
+                </td>
+            </tr>
+            <tr not-man not-woman>
+                <td>
+                    <span>
+                        <input type="checkbox" />
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        Parks Passport
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="float:left">
+        <thead>
+            <tr>
+                <th />
+                <th>
+                    Clothing
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
                 <td>
                     <input type="checkbox" />
                 </td>
                 <td>
                     Pants
                 </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    Tooth Brush/Paste/Floss
-                </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    Books
-                </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
             </tr>
             <tr>
-                <td>
-                    Mattress/Pad
-                </td>
                 <td>
                     <input type="checkbox" />
                 </td>
                 <td>
                     Shirts
                 </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    Brush/Comb
-                </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    <span child>
-                        Toys
-                    </span>
-                </td>
-                <td>
-                    <span child>
-                        <input type="checkbox" />
-                    </span>
-                </td>
             </tr>
             <tr>
                 <td>
-                    Pillow
-                </td>
-                <td>
                     <input type="checkbox" />
                 </td>
                 <td>
-                    Underwear(panties,briefs/boxers)
-                </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    Chapstick
-                </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    <span child>
-                        Stuff Animal
-                    </span>
-                </td>
-                <td>
-                    <span child>
-                        <input type="checkbox" />
-                    </span>
+                    Underwear
                 </td>
             </tr>
             <tr>
-                <td>
-                    Blanket
-                </td>
                 <td>
                     <input type="checkbox" />
                 </td>
                 <td>
                     Socks
                 </td>
+            </tr>
+            <tr not-man not-child>
                 <td>
                     <input type="checkbox" />
                 </td>
                 <td>
-                    Medicine
-                </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    Binoculars
-                </td>
-                <td>
-                    <input type="checkbox" />
+                    Bras
                 </td>
             </tr>
             <tr>
-                <td>
-                    Water Bottle
-                </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    <span woman>
-                        Bras
-                    </span>
-                </td>
-                <td>
-                    <span woman>
-                        <input type="checkbox" />
-                    </span>
-                </td>
-                <td>
-                    <span woman>
-                        Tampons/Pads/Cups
-                    </span>
-                </td>
-                <td>
-                    <span woman>
-                        <input type="checkbox" />
-                    </span>
-                </td>
-                <td>
-                    <span man woman>
-                        Camera
-                    </span>
-                </td>
-                <td>
-                    <span man woman>
-                        <input type="checkbox" />
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Pocket Knife
-                </td>
                 <td>
                     <input type="checkbox" />
                 </td>
                 <td>
                     Pajamas(tops/bottoms)
                 </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>
-                    <span woman>
-                        Face Wipes
-                    </span>
-                </td>
-                <td>
-                    <span woman>
-                        <input type="checkbox" />
-                    </span>
-                </td>
             </tr>
             <tr>
-                <td>
-                    Flash Light
-                </td>
                 <td>
                     <input type="checkbox" />
                 </td>
                 <td>
                     Jacket
                 </td>
-                <td>
-                    <input type="checkbox" />
-                </td>
             </tr>
             <tr>
                 <td>
-                    <span child>
-                        Parks Passport
-                    </span>
-                </td>
-                <td>
-                    <span child>
-                        <input type="checkbox" />
-                    </span>
+                    <input type="checkbox" />
                 </td>
                 <td>
                     Hiking Shoes/Socks
                 </td>
+            </tr>
+            <tr>
                 <td>
                     <input type="checkbox" />
                 </td>
-            </tr>
-            <tr>
-                <td />
-                <td />
                 <td>
                     Handkerchiefs
                 </td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="float:left">
+        <thead>
+            <tr>
+                <th />
+                <th>
+                    Hygiene
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
                 <td>
                     <input type="checkbox" />
+                </td>
+                <td>
+                    Tooth Brush
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Tooth Paste
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Floss
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Brush/Comb
+                </td>
+            </tr>
+            <tr not-child>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Deodorant
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Chapstick
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Medicine
+                </td>
+            </tr>
+            <tr not-man not-child>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Tampons/Pads/Cups
+                </td>
+            </tr>
+            <tr not-man not-child>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Face Wipes
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="float:left">
+        <thead>
+            <tr>
+                <th />
+                <th>
+                    Entertainment
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Books
+                </td>
+            </tr>
+            <tr not-man not-woman>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Toys
+                </td>
+            </tr>
+            <tr not-man not-woman>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Stuffed Animal
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Binoculars
+                </td>
+            </tr>
+            <tr not-child>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>
+                    Camera
                 </td>
             </tr>
         </tbody>
